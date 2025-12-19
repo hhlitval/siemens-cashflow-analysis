@@ -1,0 +1,9 @@
+camelot-py[cv]
+pdfplumber
+pandas
+numpy
+matplotlib
+seaborn
+streamlit
+python-dateutil
+tqdm
