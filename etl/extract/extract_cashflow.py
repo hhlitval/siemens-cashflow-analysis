@@ -2,7 +2,7 @@ from pathlib import Path
 import pdfplumber
 import pandas as pd
 
-folder = Path("data/raw")
+in_folder = Path("data/raw")
 out_folder = Path("data/extracted")
 out_folder.mkdir(parents=True, exist_ok=True)
 
@@ -12,7 +12,7 @@ KEYWORDS = [
     "Free Cash Flow",
 ]
 
-for file in folder.glob("*.pdf"): 
+for file in in_folder.glob("*.pdf"): 
     rows = []
     try:
         with pdfplumber.open(file) as pdf:

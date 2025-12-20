@@ -1,9 +1,25 @@
+# How To Run
+
+## Python env
+
 `python -m venv .venv`
 
-Windows:
+## Run env (Windows):
 
 `.venv\Scripts\activate`
 
-Reqs:
+## Install Reqs:
 
 `pip install -r requirements.txt`
+
+## How to run:
+
+### Extract:
+
+`python etl/extract/extract_cashflow.py`
+
+### Transform:
+
+`python etl/transform/transform_cashflow.py`
+
+### Load:
