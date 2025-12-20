@@ -14,7 +14,7 @@
 
 ## How to run:
 
-### Extract:
+### Extract data:
 
 `python etl/extract/extract_cashflow.py`
 
@@ -28,5 +28,4 @@
 
 ### Display data:
 
-`cd dashboard`
-`streamlit run app.py`
+`streamlit run dashboard/app.py`
