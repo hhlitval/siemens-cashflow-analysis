@@ -22,4 +22,6 @@
 
 `python etl/transform/transform_cashflow.py`
 
-### Load:
+### Load (into DuckDB):
+
+`python etl/load/load_to_db.py`
