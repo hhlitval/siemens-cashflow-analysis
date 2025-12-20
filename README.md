@@ -1,4 +1,4 @@
-# How To Run
+# Siemens Cashflow Analysis (2015-2025)
 
 ## Python env
 
@@ -25,3 +25,8 @@
 ### Load (into DuckDB):
 
 `python etl/load/load_to_db.py`
+
+### Display data:
+
+`cd dashboard`
+`streamlit run app.py`
