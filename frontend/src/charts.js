@@ -22,15 +22,17 @@ new Chart(document.getElementById('cashflowChart'), {
       {
         label: 'Free Cashflow',
         data: freeCashflow,
-        borderColor: '#111827',
+        borderColor: '#000',
         tension: 0.3,
       },
     ],
   },
   options: {
+    borderWidth: 1.5,
+    pointStyle: false,
     plugins: { legend: { display: false } },
     scales: {
-      y: { grid: { color: '#f3f4f6' } },
+      y: { grid: { display: false } },
       x: { grid: { display: false } },
     },
   },
@@ -44,12 +46,12 @@ new Chart(document.getElementById('capexChart'), {
       {
         label: 'Operating Cashflow',
         data: operatingCashflow,
-        backgroundColor: '#9ca3af',
+        backgroundColor: '#519872',
       },
       {
         label: 'CapEx',
         data: capex,
-        backgroundColor: '#d1d5db',
+        backgroundColor: '#000',
       },
     ],
   },
@@ -70,20 +72,18 @@ new Chart(document.getElementById('marginChart'), {
       {
         label: 'FCF Margin',
         data: fcfMargin,
-        borderColor: '#2563eb',
+        borderColor: '#519872',
         tension: 0.3,
+        fill: false,
       },
     ],
   },
   options: {
+    pointStyle: false,
+    borderWidth: 1.5,
     plugins: { legend: { display: false } },
     scales: {
-      y: {
-        ticks: {
-          callback: (value) => `${value * 100}%`,
-        },
-        grid: { color: '#f3f4f6' },
-      },
+      y: { grid: { display: false } },
       x: { grid: { display: false } },
     },
   },
