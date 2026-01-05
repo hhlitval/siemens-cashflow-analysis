@@ -9,26 +9,25 @@
   </head>
   <body>
     <div class="bg-white">
-      <header></header>
+      <header class="border-b border-gray-200 px-4 md:px-12">
+        <div class="h-[60px] md:h-12 flex items-center">
+          <h1 class="">Siemens Cashflow Analysis</h1>
+        </div>
+      </header>
+
       <section class="px-4 py-8 md:px-12">
         <div class="empty-block md:h-36 h-12"></div>
         <h1 class="text-2xl md:text-3xl md:w-1/2 tracking-tight">
-          Conventional turbines are made in low-volume, utilizing specialized
-          materials, shipped with specialized transportation equipment, and put
-          up with large and specialized cranes and specially trained crews.
+          Fundamental cash flow analysis based on Siemens annual reports (IFRS),
+          focusing on free cash flow quality, capital intensity, and long-term
+          stability.
         </h1>
         <div class="flex gap-4">
           <button
-            class="leading-none text-fluid-body-small bg-black text-white flex justify-center items-center w-fit mt-8 rounded-xl h-9 px-4"
+            id="openDetails"
+            class="leading-none text-fluid-body-small bg-white text-black border border-gray-300 flex justify-center items-center w-fit mt-8 rounded-[10px] h-9 px-4"
           >
-            Discover
-          </button>
-          <button
-            aria-label=""
-            type="button"
-            class="leading-none text-fluid-body-small bg-white text-black border border-gray-300 flex justify-center items-center w-fit mt-8 rounded-xl h-9 px-4"
-          >
-            Watch
+            Details
           </button>
         </div>
         <div class="md:ml-auto my-24 overflow-hidden md:w-3/4 self-end">
@@ -37,18 +36,77 @@
             <div class="pb-3 md:pb-0">
               <p class="text-fluid-body-small">KPIs</p>
             </div>
-            <div class="">
-              <div class="grid">
-                <div class="relative z-sm pt-0">
-                  <p class="">Latest cash flow</p>
-                  <p class="text-gray-400 whitespace-pre-line">18 mln. $</p>
-                </div>
+            <div class="grid grid-cols-3 col-span-3">
+              <div class="">
+                <p>Latest cash flow</p>
+                <p class="text-gray-400">18 mln. $</p>
+              </div>
+              <div class="">
+                <p>Latest cash flow</p>
+                <p class="text-gray-400">18 mln. $</p>
+              </div>
+              <div class="">
+                <p>Latest cash flow</p>
+                <p class="text-gray-400">18 mln. $</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div
+        id="detailsOverlay"
+        class="fixed inset-0 backdrop-blur-sm bg-white/40 hidden z-40"
+      ></div>
+      <div
+        id="detailsModal"
+        class="fixed inset-0 flex items-center justify-center hidden z-50"
+      >
+        <div
+          class="bg-white w-full max-w-lg mx-4 p-6 rounded-xl shadow-lg relative"
+        >
+          <button
+            id="closeDetails"
+            class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+
+          <h2 class="text-lg font-medium text-gray-900 mb-4">Details</h2>
+          <div>
+            <h3 class="font-medium text-gray-900">About</h3>
+            <p>
+              This project analyzes Siemens’ cash flow performance across fiscal
+              years using publicly available financial reports.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-gray-900">Data Sources</h3>
+            <p>
+              Annual reports published by Siemens AG (IFRS). Figures are
+              extracted directly from consolidated cash flow statements.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-gray-900">Calculations</h3>
+            <p>
+              Free Cash Flow = Operating Cash Flow − Capital Expenditures
+              Margins are calculated relative to Operating Cash Flow.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-gray-900">Limitations</h3>
+            <p>
+              Data is extracted from PDFs and may contain minor inconsistencies.
+              This tool is for educational and analytical purposes only.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- <script type="module" src="/src/main.js"></script> -->
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
