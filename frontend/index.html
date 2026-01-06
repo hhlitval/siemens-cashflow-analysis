@@ -10,23 +10,58 @@
   </head>
   <body>
     <div class="bg-white">
-      <header class="border-b border-gray-200 px-4 md:px-12">
-        <div class="h-[60px] md:h-12 flex items-center">
-          <p>Siemens Cashflow Analysis</p>
+      <header
+        class="flex justify-between h-[60px] items-center border-b border-gray-200 px-4 md:px-12"
+      >
+        <div class="">
+          <p class="font-medium">Siemens Cashflow Analysis</p>
         </div>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg
+          class="h-full py-4"
+          id="Layer_2"
+          data-name="Layer 2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 15 15.1"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
+            </style>
+          </defs>
+          <polygon
+            points="15 9.9 13.2 12.8 9.1 10.3 9.1 15.1 5.9 15.1 5.9 10.3 1.7 12.6 .1 10 4.2 7.5 0 5.2 1.7 2.6 5.9 4.9 5.9 0 9.1 0 9.1 4.9 13.1 2.4 14.9 5.2 10.8 7.5 15 9.9"
+          />
+          <g>
+            <line class="cls-1" x1="13.1" y1="2.4" x2="9.1" y2="4.9" />
+            <polyline class="cls-1" points="14.9 5.2 13.1 2.4 13.1 2.4" />
+            <polyline class="cls-1" points="10.8 7.5 14.9 5.2 14.9 5.2" />
+            <line class="cls-1" x1="1.7" y1="2.6" x2="5.9" y2="4.9" />
+            <polyline class="cls-1" points="0 5.2 0 5.2 1.7 2.6 1.7 2.5" />
+            <line class="cls-1" x1="4.2" y1="7.5" y2="5.2" />
+            <line class="cls-1" x1=".1" y1="10" x2="4.2" y2="7.5" />
+            <polyline class="cls-1" points="1.7 12.6 1.7 12.6 .1 10 .1 10" />
+            <line class="cls-1" x1="5.9" y1="10.3" x2="1.7" y2="12.6" />
+            <polyline class="cls-1" points="9.1 10.3 13.2 12.8 13.2 12.8" />
+            <line class="cls-1" x1="10.8" y1="7.5" x2="15" y2="9.9" />
+            <polyline class="cls-1" points="13.2 12.8 15 9.9 15 9.9" />
+          </g>
+        </svg>
       </header>
 
       <section class="px-4 py-8 md:px-12">
         <div class="empty-block md:h-24 h-12"></div>
-        <h1 class="text-2xl md:text-3xl md:w-1/2 tracking-tight">
+        <h1 class="text-2xl md:text-4xl md:w-1/2 tracking-tight">
           Fundamental cash flow analysis based on Siemens annual reports (IFRS),
-          focusing on free cash flow quality, capital intensity, and long-term
+          focusing on free cash flow quality, capital intensity and long-term
           stability.
         </h1>
         <div class="flex gap-4">
           <button
             id="openDetails"
-            class="leading-none text-fluid-body-small bg-black text-white cursor-pointer border border-gray-300 flex justify-center items-center w-fit mt-8 rounded-[10px] h-9 px-4"
+            class="leading-none text-fluid-body-small bg-black text-white cursor-pointer border border-gray-300 flex justify-center items-center w-fit mt-8 rounded-2xl h-9 px-4"
           >
             Details
           </button>
@@ -35,9 +70,9 @@
           class="md:ml-auto mt-12 mb-24 overflow-hidden md:w-3/4 self-end font-medium"
         >
           <div class="translate-x-0 opacity-100 w-full h-px bg-gray-300"></div>
-          <div class="grid grid-cols-4 md:pt-[8px]">
+          <div class="grid grid-cols-4 md:pt-[18px] leading-[1.3]">
             <div class="pb-3 md:pb-0">
-              <p class="text-fluid-body-small">Key Metrics \ 2025 \</p>
+              <p class="text-fluid-body-small">Key Metrics 2025</p>
             </div>
             <div class="grid grid-cols-3 col-span-3">
               <div class="">
@@ -57,28 +92,34 @@
         </div>
         <div class="md:ml-auto md:w-3/4 self-end">
           <div class="grid grid-cols-3 md:pt-[8px] gap-24">
-            <div>
-              <h2
-                class="text-[0.8rem] bg-black text-white border w-fit rounded-md px-2 py-0.5 mb-4 medium:mb-0"
+            <div
+              class="md:flex flex-col relative md:before:absolute md:before:left-0 md:before:top-0 md:before:bottom-0 md:before:bg-gray-300 md:before:h-full md:before:w-px md:before:-translate-x-3"
+            >
+              <p
+                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-4 py-1 mb-4 medium:mb-0"
               >
                 Cashflow Development
-              </h2>
+              </p>
               <canvas id="cashflowChart"></canvas>
             </div>
-            <div class="">
-              <h2
-                class="text-[0.8rem] bg-black text-white border w-fit rounded-md px-2 py-0.5 mb-4 medium:mb-0"
+            <div
+              class="md:flex flex-col relative md:before:absolute md:before:left-0 md:before:top-0 md:before:bottom-0 md:before:bg-gray-300 md:before:h-full md:before:w-px md:before:-translate-x-3"
+            >
+              <p
+                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-4 py-1 mb-4 medium:mb-0"
               >
                 Operating Cashflow vs CapEx
-              </h2>
+              </p>
               <canvas id="capexChart"></canvas>
             </div>
-            <div class="">
-              <h2
-                class="text-[0.8rem] bg-black text-white border w-fit rounded-md px-2 py-0.5 mb-4 medium:mb-0"
+            <div
+              class="md:flex flex-col relative md:before:absolute md:before:left-0 md:before:top-0 md:before:bottom-0 md:before:bg-gray-300 md:before:h-full md:before:w-px md:before:-translate-x-3"
+            >
+              <p
+                class="text-[0.8rem] font-medium bg-gray-100 text-w w-fit rounded-2xl px-4 py-1 mb-4 medium:mb-0"
               >
                 Free Cashflow Margin
-              </h2>
+              </p>
               <canvas id="marginChart"></canvas>
             </div>
           </div>
@@ -138,7 +179,6 @@
         </div>
       </div>
     </div>
-    <!-- #519872 -->
     <script type="module" src="src/main.js"></script>
     <script src="src/charts.js" defer></script>
   </body>
