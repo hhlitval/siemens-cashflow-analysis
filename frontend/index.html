@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="font-poppins">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="src/style.css" rel="stylesheet" />
-    <title>frontend</title>
+    <title>Siemens Cashflow Analysis</title>
   </head>
   <body>
     <div class="bg-white">
       <header class="border-b border-gray-200 px-4 md:px-12">
         <div class="h-[60px] md:h-12 flex items-center">
-          <h1 class="">Siemens Cashflow Analysis</h1>
+          <p>Siemens Cashflow Analysis</p>
         </div>
       </header>
 
       <section class="px-4 py-8 md:px-12">
-        <div class="empty-block md:h-36 h-12"></div>
+        <div class="empty-block md:h-24 h-12"></div>
         <h1 class="text-2xl md:text-3xl md:w-1/2 tracking-tight">
           Fundamental cash flow analysis based on Siemens annual reports (IFRS),
           focusing on free cash flow quality, capital intensity, and long-term
@@ -26,28 +26,30 @@
         <div class="flex gap-4">
           <button
             id="openDetails"
-            class="leading-none text-fluid-body-small bg-white text-black border border-gray-300 flex justify-center items-center w-fit mt-8 rounded-[10px] h-9 px-4"
+            class="leading-none text-fluid-body-small bg-black text-white cursor-pointer border border-gray-300 flex justify-center items-center w-fit mt-8 rounded-[10px] h-9 px-4"
           >
             Details
           </button>
         </div>
-        <div class="md:ml-auto mt-24 mb-12 overflow-hidden md:w-3/4 self-end">
+        <div
+          class="md:ml-auto mt-12 mb-24 overflow-hidden md:w-3/4 self-end font-medium"
+        >
           <div class="translate-x-0 opacity-100 w-full h-px bg-gray-300"></div>
           <div class="grid grid-cols-4 md:pt-[8px]">
             <div class="pb-3 md:pb-0">
-              <p class="text-fluid-body-small">KPIs</p>
+              <p class="text-fluid-body-small">Key Metrics \ 2025 \</p>
             </div>
             <div class="grid grid-cols-3 col-span-3">
               <div class="">
-                <p>Latest cash flow</p>
+                <p>Free Cash Flow</p>
                 <p class="text-gray-400">18 mln. $</p>
               </div>
               <div class="">
-                <p>Latest cash flow</p>
+                <p>FCF Margin</p>
                 <p class="text-gray-400">18 mln. $</p>
               </div>
               <div class="">
-                <p>Latest cash flow</p>
+                <p>CapEx Ratio</p>
                 <p class="text-gray-400">18 mln. $</p>
               </div>
             </div>
@@ -57,7 +59,7 @@
           <div class="grid grid-cols-3 md:pt-[8px] gap-24">
             <div>
               <h2
-                class="text-[0.8rem] border border-gray-400 w-fit rounded-md px-2 py-1 mb-2 medium:mb-0"
+                class="text-[0.8rem] bg-black text-white border w-fit rounded-md px-2 py-0.5 mb-4 medium:mb-0"
               >
                 Cashflow Development
               </h2>
@@ -65,7 +67,7 @@
             </div>
             <div class="">
               <h2
-                class="text-[0.8rem] border border-gray-400 w-fit rounded-md px-2 py-1 mb-2 medium:mb-0"
+                class="text-[0.8rem] bg-black text-white border w-fit rounded-md px-2 py-0.5 mb-4 medium:mb-0"
               >
                 Operating Cashflow vs CapEx
               </h2>
@@ -73,7 +75,7 @@
             </div>
             <div class="">
               <h2
-                class="text-[0.8rem] border border-gray-400 w-fit rounded-md px-2 py-1 mb-2 medium:mb-0"
+                class="text-[0.8rem] bg-black text-white border w-fit rounded-md px-2 py-0.5 mb-4 medium:mb-0"
               >
                 Free Cashflow Margin
               </h2>
