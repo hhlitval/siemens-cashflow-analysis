@@ -125,29 +125,31 @@
           </div>
         </div>
       </section>
-      <div
+      <!-- <div
         id="detailsOverlay"
-        class="fixed inset-0 backdrop-blur-sm bg-white/40 hidden z-40"
-      ></div>
+        class="fixed inset-0 z-40 bg-white/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
+      ></div> -->
       <div
         id="detailsModal"
-        class="fixed inset-0 flex items-center justify-center hidden z-50"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-white/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
       >
         <div
-          class="bg-white w-full max-w-lg mx-4 p-6 rounded-xl shadow-lg relative"
+          id="detailsContent"
+          class="bg-white w-full max-w-lg mx-4 p-6 rounded-xl shadow-lg relative transform translate-y-4 scale-95 transition-all duration-300 ease-out"
         >
-          <button
-            id="closeDetails"
-            class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition"
-            aria-label="Close"
-          >
-            ✕
-          </button>
-
-          <h2 class="text-m font-medium text-gray-900 mb-4">Details</h2>
+          <div class="flex items-center place-content-between mb-2">
+            <p class="text-m font-medium text-black"></p>
+            <button
+              id="closeDetails"
+              class="text-black hover:text-gray-700 transition pl-5 pb-5"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+          </div>
           <div>
-            <h3 class="font-medium text-gray-900">About</h3>
-            <p>
+            <h3 class="font-medium">About</h3>
+            <p class="my-4">
               This project analyzes Siemens’ cash flow performance across fiscal
               years using publicly available financial reports.
             </p>
@@ -155,7 +157,7 @@
 
           <div>
             <h3 class="font-medium text-gray-900">Data Sources</h3>
-            <p>
+            <p class="my-4">
               Annual reports published by Siemens AG (IFRS). Figures are
               extracted directly from consolidated cash flow statements.
             </p>
@@ -163,17 +165,18 @@
 
           <div>
             <h3 class="font-medium text-gray-900">Calculations</h3>
-            <p>
-              Free Cash Flow = Operating Cash Flow − Capital Expenditures
-              Margins are calculated relative to Operating Cash Flow.
+            <p class="my-4">
+              Free Cash Flow = Operating Cash Flow − Capital Expenditures Free
+              Cash Flow Conversion is calculated relative to Operating Cash
+              Flow.
             </p>
           </div>
 
           <div>
             <h3 class="font-medium text-gray-900">Limitations</h3>
-            <p>
+            <p class="my-4">
               Data is extracted from PDFs and may contain minor inconsistencies.
-              This tool is for educational and analytical purposes only.
+              This project is for educational and analytical purposes only.
             </p>
           </div>
         </div>
