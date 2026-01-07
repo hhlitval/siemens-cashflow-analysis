@@ -19,5 +19,4 @@ data = [dict(zip(cols, row)) for row in rows]
 
 with open("frontend/public/cashflow.json", "w") as f:
     json.dump(data, f, indent=2)
-
 con.close()

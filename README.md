@@ -26,6 +26,12 @@
 
 `python etl/load/load_to_db.py`
 
-### Display data:
+### Display data with streamlit:
 
 `streamlit run dashboard/app.py`
+
+### Display data with custom frontend (HTML, JS, Tailwind)
+
+#### Export data from DW to JSON file
+
+`python etl/export/export_to_json.py`
