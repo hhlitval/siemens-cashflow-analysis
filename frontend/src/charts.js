@@ -26,7 +26,7 @@ function renderCharts(
   fcfMargin
 ) {
   Chart.defaults.font.family = 'Geist, system-ui, sans-serif';
-  Chart.defaults.font.size = 12;
+  Chart.defaults.font.size = 11;
   Chart.defaults.color = '#000';
 
   new Chart(document.getElementById('cashflowChart'), {
@@ -60,7 +60,7 @@ function renderCharts(
         x: {
           grid: { display: false },
           ticks: {
-            maxTicksLimit: 4,
+            maxTicksLimit: 6,
           },
         },
         y: {
@@ -108,7 +108,7 @@ function renderCharts(
         x: {
           grid: { display: false },
           ticks: {
-            maxTicksLimit: 4,
+            maxTicksLimit: 6,
           },
         },
       },
@@ -137,14 +137,14 @@ function renderCharts(
         x: {
           grid: { display: false },
           ticks: {
-            maxTicksLimit: 4,
+            maxTicksLimit: 6,
           },
         },
         y: {
           display: true,
           ticks: { display: false },
           border: { display: false },
-          suggestedMin: 0.79,
+          suggestedMin: 0.5,
           suggestedMax: 0.85,
           // ticks: {
           //   maxTicksLimit: 4,

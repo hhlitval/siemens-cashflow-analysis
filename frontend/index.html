@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-white text-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,16 +9,16 @@
     <title>Siemens Cashflow Analysis</title>
   </head>
   <body>
-    <div class="bg-white">
+    <div class="max-w-[1920px] m-auto px-4 md:px-12">
       <header
-        class="flex justify-between h-[60px] items-center border-b border-gray-300 px-4 md:px-12"
+        class="flex justify-between h-[40px] lg:h-[60px] items-center border-b border-gray-300"
       >
         <div class="">
           <p class="font-medium">Siemens Cashflow Analysis</p>
         </div>
         <?xml version="1.0" encoding="UTF-8"?>
         <svg
-          class="h-full py-4"
+          class="h-full py-3 lg:py-4"
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,11 +51,11 @@
         </svg>
       </header>
 
-      <section class="px-4 py-8 md:px-12">
+      <section class="py-8">
         <div class="md:h-24 h-12">
-          <p class="text-right font-medium">2015 - 2025</p>
+          <p class="text-right font-medium">2015-2025</p>
         </div>
-        <h1 class="text-2xl md:text-4xl md:w-1/2 tracking-tight">
+        <h1 class="text-2xl md:text-4xl sm:w-2/3 2xl:w-1/2 tracking-tight">
           Fundamental cash flow analysis based on Siemens annual reports (IFRS),
           focusing on free cash flow quality, capital intensity and long-term
           stability.
@@ -63,20 +63,29 @@
         <div class="flex gap-4">
           <button
             id="openDetails"
-            class="leading-none text-fluid-body-small bg-black text-white cursor-pointer flex justify-center items-center w-fit mt-8 rounded-2xl h-9 px-4"
+            class="leading-none text-fluid-body-small bg-black text-white cursor-pointer flex justify-center items-center w-fit mt-4 md:mt-6 2xl:mt-8 rounded-2xl h-9 px-4"
           >
-            Details
+            <p>Details</p>
           </button>
         </div>
         <div
-          class="md:ml-auto mt-12 mb-24 overflow-hidden md:w-3/4 self-end font-medium"
+          class="2xl:ml-auto mt-12 mb-12 2xl:mb-24 overflow-hidden 2xl:w-3/4 self-end font-medium"
         >
-          <div class="translate-x-0 opacity-100 w-full h-px bg-gray-200"></div>
-          <div class="grid grid-cols-4 md:pt-[10px] leading-[1.3]">
+          <div
+            class="md:translate-x-0 md:opacity-100 md:w-full md:h-px md:bg-gray-200"
+          ></div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 md:pt-[10px] leading-[1.3]"
+          >
             <div class="pb-3 md:pb-0">
               <p class="year text-fluid-body-small"></p>
+              <div
+                class="max-md:mt-[10px] max-md:translate-x-0 max-md:opacity-100 max-md:w-full max-md:h-px max-md:bg-gray-200"
+              ></div>
             </div>
-            <div class="grid grid-cols-3 col-span-3">
+            <div
+              class="grid grid-cols-[repeat(auto-fit,minmax(125px,1fr))] md:col-span-3 max-md:gap-4"
+            >
               <div class="">
                 <p>Free Cash Flow</p>
                 <p class="fcf text-gray-500"></p>
@@ -92,36 +101,38 @@
             </div>
           </div>
         </div>
-        <div class="md:ml-auto md:w-3/4 self-end">
-          <div class="grid grid-cols-3 md:pt-[8px] gap-24">
+        <div class="2xl:ml-auto 2xl:w-3/4 self-end">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 pr-4 sm:pr-0 lg:grid-cols-3 md:pt-[8px] gap-12 xl:gap-24"
+          >
             <div
-              class="md:flex flex-col relative md:before:absolute md:before:left-0 md:before:top-0 md:before:bottom-0 md:before:bg-gray-200 md:before:h-full md:before:w-px md:before:-translate-x-3"
+              class="md:flex flex-col relative lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:bottom-0 lg:before:bg-gray-200 lg:before:h-full lg:before:w-px lg:before:-translate-x-3"
             >
-              <p
-                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-4 py-1 mb-4 medium:mb-0"
+              <h3
+                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-3 md:px-4 py-1 mb-4"
               >
                 Cashflow Development
-              </p>
+              </h3>
               <canvas id="cashflowChart"></canvas>
             </div>
             <div
-              class="md:flex flex-col relative md:before:absolute md:before:left-0 md:before:top-0 md:before:bottom-0 md:before:bg-gray-200 md:before:h-full md:before:w-px md:before:-translate-x-3"
+              class="lg:flex flex-col relative lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:bottom-0 lg:before:bg-gray-200 lg:before:h-full lg:before:w-px lg:before:-translate-x-3"
             >
-              <p
-                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-4 py-1 mb-4 medium:mb-0"
+              <h3
+                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-3 md:px-4 py-1 mb-4"
               >
                 Operating Cashflow vs CapEx
-              </p>
+              </h3>
               <canvas id="capexChart"></canvas>
             </div>
             <div
-              class="md:flex flex-col relative md:before:absolute md:before:left-0 md:before:top-0 md:before:bottom-0 md:before:bg-gray-200 md:before:h-full md:before:w-px md:before:-translate-x-3"
+              class="lg:flex flex-col relative lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:bottom-0 lg:before:bg-gray-200 lg:before:h-full lg:before:w-px lg:before:-translate-x-3"
             >
-              <p
-                class="text-[0.8rem] font-medium bg-gray-100 text-w w-fit rounded-2xl px-4 py-1 mb-4 medium:mb-0"
+              <h3
+                class="text-[0.8rem] font-medium bg-gray-100 text-w w-fit rounded-2xl px-3 md:px-4 py-1 mb-4"
               >
                 Free Cashflow Conversion
-              </p>
+              </h3>
               <canvas id="marginChart"></canvas>
             </div>
           </div>
@@ -133,7 +144,7 @@
       >
         <div
           id="detailsContent"
-          class="bg-white w-full max-w-lg mx-4 p-6 rounded-xl shadow-lg relative transform translate-y-4 scale-95 transition-all duration-300 ease-out"
+          class="bg-white w-full max-w-lg p-6 rounded-xl shadow-lg relative transform translate-y-4 scale-95 transition-all duration-300 ease-out"
         >
           <div class="flex items-center place-content-between mb-2">
             <p class="text-m font-medium text-black"></p>
@@ -179,6 +190,25 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div
+          class="flex flex-wrap gap-x-12 justify-between content-center text-gray-500 py-1"
+        >
+          <small
+            >Source:
+            <a
+              href="https://www.siemens.com/de/de/unternehmen/investor-relations/events-veroeffentlichungen-ad-hoc/jahresberichte.html"
+              target="_blank"
+              >Siemens Annual Reports (Jahresberichte)</a
+            ></small
+          >
+          <small
+            >Developed by:
+            <a href="https://www.alexlitvin.com" target="_blank">Alex Litvin</a>
+            (2026)</small
+          >
+        </div>
+      </footer>
     </div>
     <script type="module" src="src/main.js"></script>
     <script src="src/charts.js" defer></script>
