@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white text-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Siemens Cashflow Analysis</title>
+    <script type="module" crossorigin src="/assets/index-CZ-jWrhu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CW9UEfGE.css">
+  </head>
+  <body>
+    <div class="max-w-[1920px] m-auto px-4 md:px-12">
+      <header
+        class="flex justify-between h-[40px] lg:h-[60px] items-center border-b border-gray-300"
+      >
+        <div class="">
+          <p class="font-medium">Siemens Cashflow Analysis</p>
+        </div>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg
+          class="h-full py-3 lg:py-4"
+          id="Layer_2"
+          data-name="Layer 2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 15 15.1"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
+            </style>
+          </defs>
+          <polygon
+            points="15 9.9 13.2 12.8 9.1 10.3 9.1 15.1 5.9 15.1 5.9 10.3 1.7 12.6 .1 10 4.2 7.5 0 5.2 1.7 2.6 5.9 4.9 5.9 0 9.1 0 9.1 4.9 13.1 2.4 14.9 5.2 10.8 7.5 15 9.9"
+          />
+          <g>
+            <line class="cls-1" x1="13.1" y1="2.4" x2="9.1" y2="4.9" />
+            <polyline class="cls-1" points="14.9 5.2 13.1 2.4 13.1 2.4" />
+            <polyline class="cls-1" points="10.8 7.5 14.9 5.2 14.9 5.2" />
+            <line class="cls-1" x1="1.7" y1="2.6" x2="5.9" y2="4.9" />
+            <polyline class="cls-1" points="0 5.2 0 5.2 1.7 2.6 1.7 2.5" />
+            <line class="cls-1" x1="4.2" y1="7.5" y2="5.2" />
+            <line class="cls-1" x1=".1" y1="10" x2="4.2" y2="7.5" />
+            <polyline class="cls-1" points="1.7 12.6 1.7 12.6 .1 10 .1 10" />
+            <line class="cls-1" x1="5.9" y1="10.3" x2="1.7" y2="12.6" />
+            <polyline class="cls-1" points="9.1 10.3 13.2 12.8 13.2 12.8" />
+            <line class="cls-1" x1="10.8" y1="7.5" x2="15" y2="9.9" />
+            <polyline class="cls-1" points="13.2 12.8 15 9.9 15 9.9" />
+          </g>
+        </svg>
+      </header>
+
+      <section class="py-8">
+        <div class="md:h-24 h-12">
+          <p class="text-right font-medium">2015-2025</p>
+        </div>
+        <h1 class="text-2xl md:text-4xl sm:w-2/3 2xl:w-1/2 tracking-tight">
+          Fundamental cash flow analysis based on Siemens annual reports (IFRS),
+          focusing on free cash flow quality, capital intensity and long-term
+          stability.
+        </h1>
+        <div class="flex gap-4">
+          <button
+            id="openDetails"
+            class="leading-none text-fluid-body-small bg-black text-white cursor-pointer flex justify-center items-center w-fit mt-4 md:mt-6 2xl:mt-8 rounded-2xl h-9 px-4"
+          >
+            <p>Details</p>
+          </button>
+        </div>
+        <div
+          class="2xl:ml-auto mt-12 mb-12 2xl:mb-24 overflow-hidden 2xl:w-3/4 self-end font-medium"
+        >
+          <div
+            class="md:translate-x-0 md:opacity-100 md:w-full md:h-px md:bg-gray-200"
+          ></div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 md:pt-[10px] leading-[1.3]"
+          >
+            <div class="pb-3 md:pb-0">
+              <p class="year text-fluid-body-small"></p>
+              <div
+                class="max-md:mt-[10px] max-md:translate-x-0 max-md:opacity-100 max-md:w-full max-md:h-px max-md:bg-gray-200"
+              ></div>
+            </div>
+            <div
+              class="grid grid-cols-[repeat(auto-fit,minmax(125px,1fr))] md:col-span-3 max-md:gap-4"
+            >
+              <div class="">
+                <p>Free Cash Flow</p>
+                <p class="fcf text-gray-500"></p>
+              </div>
+              <div class="">
+                <p>FCF Conversion</p>
+                <p class="fcf-conversion text-gray-500"></p>
+              </div>
+              <div class="">
+                <p>CapEx Ratio</p>
+                <p class="capex-ratio text-gray-500"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="2xl:ml-auto 2xl:w-3/4 self-end">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 pr-4 sm:pr-0 lg:grid-cols-3 md:pt-[8px] gap-12 xl:gap-24"
+          >
+            <div
+              class="md:flex flex-col relative lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:bottom-0 lg:before:bg-gray-200 lg:before:h-full lg:before:w-px lg:before:-translate-x-3"
+            >
+              <h3
+                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-3 md:px-4 py-1 mb-4"
+              >
+                Cashflow Development
+              </h3>
+              <canvas id="cashflowChart"></canvas>
+            </div>
+            <div
+              class="lg:flex flex-col relative lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:bottom-0 lg:before:bg-gray-200 lg:before:h-full lg:before:w-px lg:before:-translate-x-3"
+            >
+              <h3
+                class="text-[0.8rem] font-medium bg-gray-100 w-fit rounded-2xl px-3 md:px-4 py-1 mb-4"
+              >
+                Operating Cashflow vs CapEx
+              </h3>
+              <canvas id="capexChart"></canvas>
+            </div>
+            <div
+              class="lg:flex flex-col relative lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:bottom-0 lg:before:bg-gray-200 lg:before:h-full lg:before:w-px lg:before:-translate-x-3"
+            >
+              <h3
+                class="text-[0.8rem] font-medium bg-gray-100 text-w w-fit rounded-2xl px-3 md:px-4 py-1 mb-4"
+              >
+                Free Cashflow Conversion
+              </h3>
+              <canvas id="marginChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        id="detailsModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-white/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200 ease-out"
+      >
+        <div
+          id="detailsContent"
+          class="bg-white w-full max-w-lg p-6 rounded-xl shadow-lg relative transform translate-y-4 scale-95 transition-all duration-300 ease-out"
+        >
+          <div class="flex items-center place-content-between mb-2">
+            <p class="text-m font-medium text-black"></p>
+            <button
+              id="closeDetails"
+              class="text-black hover:text-gray-700 transition pl-5 pb-5"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+          </div>
+          <div>
+            <h3 class="font-medium">About</h3>
+            <p class="my-4">
+              This project analyzes Siemens’ cash flow performance across fiscal
+              years using publicly available financial reports.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-gray-900">Data Sources</h3>
+            <p class="my-4">
+              Annual reports published by Siemens AG (IFRS). Figures are
+              extracted directly from consolidated cash flow statements.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-gray-900">Calculations</h3>
+            <p class="my-4">
+              Free Cash Flow = Operating Cash Flow − Capital Expenditures Free
+              Cash Flow Conversion is calculated relative to Operating Cash
+              Flow.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-gray-900">Limitations</h3>
+            <p class="my-4">
+              Data is extracted from PDFs and may contain minor inconsistencies.
+              This project is for educational and analytical purposes only.
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div
+          class="flex flex-wrap gap-x-12 justify-between content-center text-gray-500 py-1"
+        >
+          <small
+            >Source:
+            <a
+              href="https://www.siemens.com/de/de/unternehmen/investor-relations/events-veroeffentlichungen-ad-hoc/jahresberichte.html"
+              target="_blank"
+              >Siemens Annual Reports (Jahresberichte)</a
+            ></small
+          >
+          <small
+            >Developed by:
+            <a href="https://www.alexlitvin.com" target="_blank">Alex Litvin</a>
+            (2026)</small
+          >
+        </div>
+      </footer>
+    </div>
+    <script src="src/charts.js" defer></script>
+  </body>
+</html>

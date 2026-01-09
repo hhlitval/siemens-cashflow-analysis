@@ -2,7 +2,7 @@
 
 A data-focused project analyzing Siemens AG’s cash flow performance across fiscal years using publicly available annual reports. The project combines an end-to-end ETL pipeline with analytical storage (DuckDB) and two visualization layers: a Streamlit dashboard and a minimalist web frontend.
 
-![Project demo](./assets/preview.png)
+![Project demo](./assets/preview.jpg)
 
 ## Project Overview
 
