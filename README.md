@@ -96,6 +96,7 @@ python etl/export/export_to_json.py
 
 Main analytical table:
 
+```
 siemens_cashflow
 ├── fiscal_year
 ├── operating_cashflow
@@ -103,6 +104,7 @@ siemens_cashflow
 ├── free_cashflow
 ├── capex_ratio
 └── fcf_margin
+```
 
 ## Visualizations
 
