@@ -65,7 +65,7 @@ Run the ETL pipeline in the following order:
 Parses required data from Siemens annual report PDFs.
 
 ```bash
-   python etl/extract/extract_cashflow.py
+python etl/extract/extract_cashflow.py
 ```
 
 ### Transform
@@ -73,7 +73,7 @@ Parses required data from Siemens annual report PDFs.
 Cleans extracted data and computes derived metrics.
 
 ```bash
-   python etl/transform/transform_cashflow.py
+python etl/transform/transform_cashflow.py
 ```
 
 ### Load
@@ -81,7 +81,7 @@ Cleans extracted data and computes derived metrics.
 Loads transformed data into DuckDB.
 
 ```bash
-   python etl/load/load_to_db.py
+python etl/load/load_to_db.py
 ```
 
 ### Export data (for Web Frontend)
@@ -89,7 +89,7 @@ Loads transformed data into DuckDB.
 Exports data from DuckDB to JSON.
 
 ```bash
-   python etl/export/export_to_json.py
+python etl/export/export_to_json.py
 ```
 
 ## Data Model
@@ -111,7 +111,7 @@ siemens_cashflow
 A quick analytical interface for exploration and validation.
 
 ```bash
-   streamlit run dashboard/app.py
+streamlit run dashboard/app.py
 ```
 
 ### Web Frontend
