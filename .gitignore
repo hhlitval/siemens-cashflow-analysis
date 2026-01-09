@@ -1,0 +1,6 @@
+data/raw
+data/warehouse
+.venv
+.vite/*
+.vscode/*
+cli.md
