@@ -5,7 +5,7 @@ const lastFcf = document.querySelector('.fcf');
 const lastFcfMargin = document.querySelector('.fcf-conversion');
 const lastCapexRatio = document.querySelector('.capex-ratio');
 
-fetch('/cashflow.json')
+fetch('./cashflow.json')
   .then((r) => r.json())
   .then((data) => {
     const years = data.map((d) => d.year);

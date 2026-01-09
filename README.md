@@ -126,7 +126,7 @@ A minimalist frontend built with:
 
 ## Demo (Web Frontend)
 
-- [Project's live frontend demo]()
+- [Project's live frontend demo](https://hhlitval.github.io/siemens-cashflow-analysis/)
 
 ## License
 

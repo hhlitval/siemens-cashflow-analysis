@@ -1,4 +1,5 @@
 'use strict';
+import './charts.js';
 
 const openBtn = document.getElementById('openDetails');
 const closeBtn = document.getElementById('closeDetails');
