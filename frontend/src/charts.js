@@ -167,7 +167,7 @@ function getKeyMetrics(
   lastYear.textContent = `Key Metrics ${getLastElement(years)}`;
   lastFcf.textContent = `${Math.round(
     getLastElement(freeCashflow) / 1000
-  )} Mio. €`;
+  )} bn €`;
   lastFcfMargin.textContent = `${(getLastElement(fcfMargin) * 100).toFixed(
     0
   )} %`;
