@@ -4,76 +4,76 @@
     "operating_cashflow": 6612,
     "capex": 1897,
     "free_cashflow": 4984,
-    "fcf_margin": 0.75
+    "fcf_conversion": 0.75
   },
   {
     "year": 2016,
     "operating_cashflow": 7611,
     "capex": 2135,
     "free_cashflow": 5533,
-    "fcf_margin": 0.73
+    "fcf_conversion": 0.73
   },
   {
     "year": 2017,
     "operating_cashflow": 7176,
     "capex": 2406,
     "free_cashflow": 4819,
-    "fcf_margin": 0.67
+    "fcf_conversion": 0.67
   },
   {
     "year": 2018,
     "operating_cashflow": 8425,
     "capex": 2602,
     "free_cashflow": 5814,
-    "fcf_margin": 0.69
+    "fcf_conversion": 0.69
   },
   {
     "year": 2019,
     "operating_cashflow": 8456,
     "capex": 2610,
     "free_cashflow": 5872,
-    "fcf_margin": 0.69
+    "fcf_conversion": 0.69
   },
   {
     "year": 2020,
     "operating_cashflow": 8862,
     "capex": 1554,
     "free_cashflow": 6625,
-    "fcf_margin": 0.75
+    "fcf_conversion": 0.75
   },
   {
     "year": 2021,
     "operating_cashflow": 10109,
     "capex": -1730,
     "free_cashflow": 8379,
-    "fcf_margin": 0.83
+    "fcf_conversion": 0.83
   },
   {
     "year": 2022,
     "operating_cashflow": 10322,
     "capex": -2084,
     "free_cashflow": 8238,
-    "fcf_margin": 0.8
+    "fcf_conversion": 0.8
   },
   {
     "year": 2023,
     "operating_cashflow": 12281,
     "capex": -2218,
     "free_cashflow": 10062,
-    "fcf_margin": 0.82
+    "fcf_conversion": 0.82
   },
   {
     "year": 2024,
     "operating_cashflow": 11814,
     "capex": -2088,
     "free_cashflow": 9726,
-    "fcf_margin": 0.82
+    "fcf_conversion": 0.82
   },
   {
     "year": 2025,
     "operating_cashflow": 13448,
     "capex": -2445,
     "free_cashflow": 11004,
-    "fcf_margin": 0.82
+    "fcf_conversion": 0.82
   }
 ]
