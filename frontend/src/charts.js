@@ -12,7 +12,7 @@ fetch('./cashflow.json')
     const operatingCashflow = data.map((d) => d.operating_cashflow);
     const capex = data.map((d) => d.capex);
     const freeCashflow = data.map((d) => d.free_cashflow);
-    const fcfMargin = data.map((d) => d.fcf_margin);
+    const fcfMargin = data.map((d) => d.fcf_conversion);
 
     getKeyMetrics(years, freeCashflow, fcfMargin, capex, operatingCashflow);
     renderCharts(years, operatingCashflow, capex, freeCashflow, fcfMargin);

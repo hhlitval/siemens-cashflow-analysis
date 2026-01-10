@@ -9,7 +9,7 @@ rows = con.execute("""
     operating_cashflow,
     capex,
     free_cashflow,
-    fcf_margin
+    fcf_conversion
   FROM siemens_cashflow
   ORDER BY fiscal_year
 """).fetchall()

@@ -1,0 +1,10 @@
+[19:35:09]  Siemens Cashflow ETL STARTED
+[19:35:09] START: Extract cashflow from PDFs
+[19:35:09] SUCCESS: Extract cashflow from PDFs
+[19:35:09] START: Transform cashflow data
+[19:35:10] SUCCESS: Transform cashflow data
+[19:35:10] START: Load data into DuckDB
+[19:35:10] SUCCESS: Load data into DuckDB
+[19:35:10] START: Export data to JSON
+[19:35:10] SUCCESS: Export data to JSON
+[19:35:10] ETL pipeline completed successfully.

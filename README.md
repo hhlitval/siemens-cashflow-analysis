@@ -50,8 +50,15 @@ This project extracts, transforms, and analyzes cash flow data from Siemens annu
 
 ## Setup
 
+- Python 3.10+
+- Installed Python dependencies
+- Siemens Annual Report PDFs
+
 > [!IMPORTANT]
 > Before running the ETL pipeline, make sure Python dependencies are installed.
+
+> [!NOTE]
+> Due to copyright and redistribution restrictions, the original Siemens annual report PDFs are **not included in this repository**. Before running the ETL pipeline, you must manually download the required annual reports (Jahresberichte) from the official Siemens website and place them into the following directory: `data/raw/`
 
 > [!TIP]
 > It is recommended to use a virtual environment.
@@ -92,6 +99,16 @@ Exports data from DuckDB to JSON.
 python etl/export/export_to_json.py
 ```
 
+## Running the Full ETL Pipeline
+
+Alternatively, run the full ETL pipeline using:
+
+```powershell
+.\run_etl.ps1
+```
+
+This script guarantees that all ETL steps are executed **sequentially**. If any step fails, the pipeline stops immediately and logs the error.
+
 ## Data Model
 
 Main analytical table:
@@ -103,7 +120,7 @@ siemens_cashflow
 ├── capex
 ├── free_cashflow
 ├── capex_ratio
-└── fcf_margin
+└── fcf_conversion
 ```
 
 ## Visualizations

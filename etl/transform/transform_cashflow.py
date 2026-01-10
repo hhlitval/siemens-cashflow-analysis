@@ -46,7 +46,7 @@ for csv_file in sorted(EXTRACTED_DIR.glob("cashflow_*_raw.csv")):
             "operating_cashflow": operating_cf,
             "capex": capex,
             "free_cashflow": free_cf,
-            "fcf_margin": round(free_cf / operating_cf, 2),
+            "fcf_conversion": round(free_cf / operating_cf, 2),
             "capex_ratio": round(capex / operating_cf, 2),
         })
 

@@ -31,7 +31,7 @@ col1.metric(
 
 col2.metric(
     "FCF Margin (latest)",
-    f"{latest.fcf_margin:.2%}"
+    f"{latest.fcf_conversion:.2%}"
 )
 
 col3.metric(
@@ -59,7 +59,7 @@ st.line_chart(
 st.subheader("Free Cash Flow Margin")
 
 st.line_chart(
-    df.set_index("fiscal_year")["fcf_margin"]
+    df.set_index("fiscal_year")["fcf_conversion"]
 )
 
 st.subheader("CapEx Ratio")
